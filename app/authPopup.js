@@ -97,16 +97,25 @@ function getTokenPopup(request) {
 function seeProfile() {
     getTokenPopup(loginRequest)
         .then(response => {
-            callMSGraph(graphConfig.graphMeEndpoint, response.accessToken, updateUI);
+            callAzure(endpoints.graphMeEndpoint, response.accessToken, updateUI);
         }).catch(error => {
             console.error(error);
         });
 }
 
-function readMail() {
-    getTokenPopup(tokenRequest)
+function getLabs() {
+    getTokenPopup(loginRequest)
         .then(response => {
-            callMSGraph(graphConfig.graphMailEndpoint, response.accessToken, updateUI);
+            callAzure(endpoints.getLabsEndpoint, response.accessToken, updateUI);
+        }).catch(error => {
+            console.error(error);
+        });
+}
+
+function getStorage() {
+    getTokenPopup(loginRequest)
+        .then(response => {
+            callAzure(endpoints.getStorageEndpoint, response.accessToken, updateUI);
         }).catch(error => {
             console.error(error);
         });

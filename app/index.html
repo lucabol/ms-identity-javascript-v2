@@ -41,7 +41,10 @@
         <button class="btn btn-primary" id="seeProfile" onclick="seeProfile()">See Profile</button>
         <br>
         <br>
-        <button class="btn btn-primary" id="readMail" onclick="readMail()">Read Mails</button>
+        <button class="btn btn-primary" id="getStorage" onclick="getStorage()">Get Storage</button>
+        <br>
+        <br>
+        <button class="btn btn-primary" id="getLabs" onclick="getLabs()">Get Labs</button>
       </div>
     </div>
     </div>
@@ -66,12 +69,11 @@
     
     <!-- importing app scripts (load order is important) -->
     <script type="text/javascript" src="./authConfig.js"></script>
-    <script type="text/javascript" src="./graphConfig.js"></script>
     <script type="text/javascript" src="./ui.js"></script>
     
     <!-- <script type="text/javascript" src="./authRedirect.js"></script>   -->
     <!-- uncomment the above line and comment the line below if you would like to use the redirect flow -->
     <script type="text/javascript" src="./authPopup.js"></script>
-    <script type="text/javascript" src="./graph.js"></script>
+    <script type="text/javascript" src="./azure.js"></script>
   </body>
 </html>
