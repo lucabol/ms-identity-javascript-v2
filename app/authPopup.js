@@ -104,7 +104,7 @@ function seeProfile() {
 }
 
 function getLabs() {
-    getTokenPopup(loginRequest)
+    getTokenPopup(dtlLoginRequest)
         .then(response => {
             callAzure(endpoints.getLabsEndpoint, response.accessToken, updateUI);
         }).catch(error => {
